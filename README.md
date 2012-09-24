@@ -5,7 +5,7 @@ using:
    - [django](https://www.djangoproject.com/) : awesome python web framework
    - [django-tastypie](http://django-tastypie.readthedocs.org/en/latest/index.html) : delicious api for django
    - [backbone](http://backbonejs.org/) : evolved structure for client-side javascript
-   - [bootstrap](http://twitter.github.com/bootstrap/i) : sweet css scaffolding
+   - [bootstrap](http://twitter.github.com/bootstrap/) : sweet css scaffolding
     
 to get started:
 ---------------
