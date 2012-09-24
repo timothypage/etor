@@ -21,16 +21,6 @@ REL_CHOICES = (
 )
 
 
-class Specimen(models.Model):
-    patient = models.ForeignKey(Patient)
-    collection_time = models.DateTimeField()
-    specimen_id = models.CharField(max_length=255, blank=True)
-    source = models.ForeignKey(Specimen_Source, null=True)
-    test_reason = models.ManyToManyField(Test_Reason, verbose_name="reason for testing", null=True)
-    
-    def __unicode__(self):
-        return self.patient.first_name + ' ' + self.patient.last_name + ' ' + str(self.source)
-
 
 class Place(models.Model):
     city = models.CharField(max_length=64)
@@ -96,4 +86,16 @@ class Patient(models.Model):
     
     def __unicode__(self):
         return self.first_name + ' ' + self.last_name + ' ' + str(self.birth_date)
+    
+
+class Specimen(models.Model):
+    patient = models.ForeignKey(Patient)
+    collection_time = models.DateTimeField()
+    specimen_id = models.CharField(max_length=255, blank=True)
+    source = models.ForeignKey(Specimen_Source, null=True)
+    test_reason = models.ManyToManyField(Test_Reason, verbose_name="reason for testing", null=True)
+    
+    def __unicode__(self):
+        return self.patient.first_name + ' ' + self.patient.last_name + ' ' + str(self.source)
+
 

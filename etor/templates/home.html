@@ -1,0 +1,16 @@
+{% extends 'foundation.html' %}{% load url from future %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+  <h1>{{ greeting }}</h1>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+{% endblock %}
+
