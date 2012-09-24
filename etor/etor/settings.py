@@ -161,6 +161,7 @@ LOGGING = {
     }
 }
 
+# TODO: conditionally load the development settings on an environment variable?
 try:
     # Put your local DB settings in a file called 'local_settings.py'
     from local_settings import *
