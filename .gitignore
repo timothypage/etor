@@ -1,0 +1,31 @@
+*.pyc
+*.DS_Store
+*~
+bugs/*
+data/*
+docs/*
+sheets/*
+sql/*
+aws/*
+graphics/*
+venv/
+
+# Local media
+server/media/*
+*.xlsx#
+
+# Local settings file
+server/local_settings.py
+
+# Databases
+*.db
+
+# Sublime projects
+*.sublime-workspace
+*.sublime-project
+
+# Less CSS
+server/static/less/*.css
+
+# vim swap files
+*.swp
