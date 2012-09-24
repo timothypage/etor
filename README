@@ -1,0 +1,8 @@
+Example ETOR application
+========================
+
+using:
+    django
+    django-tastypie
+    backbone
+    
