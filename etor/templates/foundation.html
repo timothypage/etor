@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="shortcut icon" href="{ {STATIC_URL }}img/favicon.ico">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
     {% block base_css %}{% endblock %}
     {% block css %}{% endblock %}
