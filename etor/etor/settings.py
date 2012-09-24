@@ -128,7 +128,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
 
-    'sample_ordering',
+    'samples',
+    'picker',
 )
 
 # A sample logging configuration. The only tangible logging

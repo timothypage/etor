@@ -1,6 +1,8 @@
 from django.db import models
 
+from picker.models import Race, Ethnicity, TestReason, SpecimenSource
 
+# TODO move this to picker?
 GENDER_CHOICES = (
     (u'M', u'Male'),
     (u'F', u'Female'),
@@ -21,7 +23,6 @@ REL_CHOICES = (
 )
 
 
-
 class Place(models.Model):
     city = models.CharField(max_length=64)
     state = models.CharField(max_length=64)
@@ -29,27 +30,6 @@ class Place(models.Model):
     
     def __unicode__(self):
         return self.city + ' ' + self.state + ' ' + self.zip
-
-
-class Ethnicity(models.Model):
-    ethnicity = models.CharField(max_length=255)
-    
-    def __unicode__(self):
-        return self.ethnicity
-
-
-class Race(models.Model):
-    race = models.CharField(max_length=255)
-    
-    def __unicode__(self):
-        return self.race
-
-
-class Specimen_Source(models.Model):
-    source = models.CharField(max_length=64)
-    
-    def __unicode__(self):
-        return self.source
 
 
 class Insurance(models.Model):
@@ -62,13 +42,6 @@ class Insurance(models.Model):
     
     def __unicode__(self):
         return self.last_name + ' ' + self.first_name
-
-
-class Test_Reason(models.Model):
-    reason = models.CharField(max_length=1024)
-    
-    def __unicode__(self):
-        return self.reason
 
 
 class Patient(models.Model):
@@ -92,8 +65,8 @@ class Specimen(models.Model):
     patient = models.ForeignKey(Patient)
     collection_time = models.DateTimeField()
     specimen_id = models.CharField(max_length=255, blank=True)
-    source = models.ForeignKey(Specimen_Source, null=True)
-    test_reason = models.ManyToManyField(Test_Reason, verbose_name="reason for testing", null=True)
+    source = models.ForeignKey(SpecimenSource, null=True)
+    test_reason = models.ManyToManyField(TestReason, verbose_name="reason for testing", null=True)
     
     def __unicode__(self):
         return self.patient.first_name + ' ' + self.patient.last_name + ' ' + str(self.source)
