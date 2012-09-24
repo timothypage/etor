@@ -2,9 +2,9 @@ Example ETOR application
 ========================
 
 using:
-    django - awesome python web framework
-    django-tastypie - delicious api for django
-    backbone - evolved structure for client-side javascript
+   - django : awesome python web framework
+   - django-tastypie : delicious api for django
+   - backbone : evolved structure for client-side javascript
     
 to get started:
 ---------------
