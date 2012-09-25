@@ -13,7 +13,7 @@ to get started:
 
 Install python2.7
 
-install pip
+install [pip](http://www.pip-installer.org/en/latest/installing.html)
 
 create a project folder
 
