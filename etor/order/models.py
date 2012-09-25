@@ -22,7 +22,7 @@ class Order(models.Model):
 class Package(models.Model):
     submitted = models.BooleanField(default=False)
     submitted_time = models.DateTimeField(auto_now_add=True)
-    orders = ManyToManyField(Order)
+    orders = models.ManyToManyField(Order)
     tracking_number = models.CharField(max_length=255)
     submitting_agency = models.ForeignKey(Agency)
 
